@@ -34,7 +34,7 @@ const game = document.getElementById("game");
         const [a,b,c] = pattern;
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
           gameOver = true;
-          status.textContent = "🎉 Player ${board[a]} wins!";
+          status.textContent = `🎉 Player ${board[a]} wins!`;
           // ----------------------------------------------------------------
           winSound.play();
           // ----------------------------------------------------------------
@@ -69,7 +69,7 @@ const game = document.getElementById("game");
       checkWinner();
       if (!gameOver) {
         currentPlayer = currentPlayer === "X" ? "O" : "X";
-        status.textContent = "Player ${currentPlayer}'s turn";
+        status.textContent = `Player ${currentPlayer}'s turn`;
       }
     });
 
