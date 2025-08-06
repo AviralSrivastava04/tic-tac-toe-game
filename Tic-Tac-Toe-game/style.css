@@ -1,0 +1,112 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #121212, #1e1e1e);
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      padding-top: 60px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    #game {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .cell {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .cell:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    #status {
+      margin-top: 25px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #ddd;
+    }
+    #reset {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #03dac5;
+      color: #121212;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #reset:hover {
+      background: #00bfa5;
+    }
+
+    /* -------------- */
+
+    #theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background: #03dac5;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #121212;
+  transition: background 0.3s ease;
+}
+#theme-toggle:hover {
+  background: #00bfa5;
+}
+body.light {
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  color: #121212;
+}
+body.light .cell {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+body.light #game {
+  background: rgba(0, 0, 0, 0.05);
+}
+body.light #status {
+  color: #333;
+}
+body.light #reset,
+body.light #theme-toggle {
+  background: #6200ea;
+  color: white;
+}
+
+body.light h1 {
+  color: #121212;
+}
