@@ -102,11 +102,47 @@ body.light #status {
   color: #333;
 }
 body.light #reset,
-body.light #theme-toggle {
+body.light #theme-toggle,
+body.light #mode-btn{
   background: #6200ea;
   color: white;
 }
 
 body.light h1 {
-  color: #121212;
+  /* background: #6200ea; */
+  color: rgb(2, 2, 2);
+}
+
+#mode-btn {
+  /* display: inline-block;
+  background-color: #03dac5;
+  color: #121212;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease; */
+
+
+  margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #03dac5;
+      color: #121212;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+}
+
+#mode-btn:hover {
+  background-color: #02c0ad;
+}
+
+#mode-btn:active {
+  transform: scale(0.96);
 }
